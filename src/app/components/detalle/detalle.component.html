@@ -1,0 +1,73 @@
+<div class="blue">
+    <div class="container">
+        <div class="row center">
+            <div class="col-12 mb">
+                <h1>Móvil #{{auto?.movil}}</h1>
+            </div>
+            <div class="col-12 mt">
+                <span>Patente: {{auto?.patente}}</span>
+            </div>
+            <div class="col-12 mt">
+                <span>{{auto?.marca}} {{auto?.modelo}} {{auto?.color}}</span>
+            </div>
+        </div>
+        <div class="row center">
+            <div class="foto mtb-10">
+                <img class="inner-foto" [src]="chofer?.foto" alt="chofer?.apellido">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt">
+                <span>Chofer: {{chofer?.apellido}} {{chofer?.nombre}}</span>
+            </div>
+            <div class="col-12 mt">
+                <span>DNI: {{chofer?.dni}}</span>
+            </div>
+            <div class="col-12 mt">
+                <span>Dirección: {{chofer?.direccion}}</span>
+            </div>
+        </div>
+        <div class="row center mt-20">
+            <div class="col-12">
+                <button mat-raised-button class="w-75 sombra" [routerLink]="['alerta']">
+                    <mat-icon class="btn-icon">notifications_active</mat-icon>
+                    Enviar Alerta
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mb">
+        <h3>Choferes Autorizados</h3>
+    </div>
+    <div class="row">
+        <carousel [arrows]="false">
+            <div class="carousel-cell" *ngFor="let chofer of choferes">
+                <div (click)="setChofer(chofer)" class="chofer">
+                    <img [src]="chofer.foto" alt="chofer.apellido">
+                </div>
+            </div>
+            <!-- <div class="carousel-cell">
+                <mat-card>
+                    <img src="https://valorant.tdj.gg/uploads/attachs/13773_a48a45b038991a7bb43fa803d9a9e601.jpg" alt="" class="chofer">
+                </mat-card>
+            </div>
+            <div class="carousel-cell">
+                <mat-card>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8MQ-fUwbUUpYIu8HTmWix_mng7qFfDOS1BQ&usqp=CAU" alt="" class="chofer">
+                </mat-card>
+            </div>
+            <div class="carousel-cell">
+                <mat-card>
+                    <img src="https://valorant.tdj.gg/uploads/attachs/13773_a48a45b038991a7bb43fa803d9a9e601.jpg" alt="" class="chofer">
+                </mat-card>
+            </div>
+            <div class="carousel-cell">
+                <mat-card>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8MQ-fUwbUUpYIu8HTmWix_mng7qFfDOS1BQ&usqp=CAU" alt="" class="chofer">
+                </mat-card>
+            </div> -->
+        </carousel>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt">
+            <div class="taxi center">
+                <img src="assets/images/taxi.png" alt="" class="taxi-image">
+            </div>
+            <h1 class="center cm">Consultar Móvil</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 center">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Número de Móvil</mat-label>
+                <mat-icon matPrefix>directions_car</mat-icon>
+                <input type="text" matInput [(ngModel)]="movil">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 center">
+            <button mat-raised-button color="primary" class="w-100" (click)="consultarMovil()">Consultar</button>
+        </div>
+    </div>
+    <div class="row mtb">
+        <div class="col-12 center">
+            <button mat-raised-button color="primary" class="w-100">Escanear QR</button>
+        </div>
+    </div>
+</div>
